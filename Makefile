@@ -68,7 +68,7 @@ clean:
 
 # Build the list of dependencies included at the bottom
 make.dep: *.c *.h
-	gcc -M $(COBJS:.o=.c) >make.dep
+	$(CC) -M $(COBJS:.o=.c) >make.dep
 
 # If gcc -M fails, delete make.dep rather than allowing a half-finished file
 # to sit around for the next build
